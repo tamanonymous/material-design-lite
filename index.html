@@ -1,0 +1,3527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Fullscreen Background Carousel - Bootstrap Carousel</title>
+<meta name="description" content="Fullscreen Background - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+<!--#####################
+Additional Styles (required)
+######################-->
+<style>
+html,body {
+	height:100%;
+	width:100%;
+	position:relative;
+}
+#background-carousel{
+	position:fixed;
+	width:100%;
+	height:100%;
+	z-index:-1;
+}
+.carousel,
+.carousel-inner {
+	width:100%;
+	height:100%;
+	z-index:0;
+	overflow:hidden;
+}
+.item {
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-size:cover;
+	z-index:0;
+}
+
+#content-wrapper {
+	position:absolute;
+	z-index:1 !important;
+	min-width:100%;
+	min-height:100%;
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div id="background-carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image:url(http://placehold.it/1600x800/)"></div>
+        <div class="item" style="background-image:url(http://placehold.it/1600x800/)"></div>
+        <div class="item" style="background-image:url(http://placehold.it/1600x800/)"></div>  
+      </div>
+    </div>
+</div>
+ 
+ 
+<div id="content-wrapper">
+<!-- PAGE CONTENT -->
+	<div class="container">
+        <div class="page-header"><h3>Background Carousel</h3></div>
+        <div class="well" style="opacity:0.6;"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div><!-- End Well -->
+    </div><!-- End Container -->
+<!-- PAGE CONTENT -->
+</div>
+ 
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+  /* Additional Javascript (required) */
+	$('#myCarousel').carousel({
+		pause: 'none'
+	})	
+});
+</script>
+</body>
+</html>
+ boxed-thumbnails.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Boxed Thumbnails - Bootstrap Carousel</title>
+<meta name="description" content="Boxed Thumbnails - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+
+#myCarousel .thumbnail {
+	margin-bottom: 0;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control {
+	color:#fff;
+	top:40%;
+	color:#428BCA;
+	bottom:auto;
+	padding-top:4px;
+	width:30px;
+	height:30px;
+	text-shadow:none;
+	opacity:1;
+}
+.carousel-control:hover {
+	color: #d9534f;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control.right {
+	left:auto;
+	right:-32px;
+}
+.carousel-control.left {
+	right:auto;
+	left:-32px;
+}
+
+.carousel-indicators {
+	bottom:-30px;
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:10px;
+	height:10px;
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.carousel-indicators .active {
+	width:12px;
+	height:12px;
+	background:#3276b1;
+	border-color:#3276b1;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+			<div class="well">
+            <!-- Carousel
+            ================================================== -->            
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb11"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb12"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb13"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb14"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb21"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb22"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb23"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb24"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb31"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb32"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb33"></a>
+                            </div>
+                            <div class="col-md-3"><a href="#" class="thumbnail"><img class="img-responsive" src="http://placehold.it/250x160" alt="Thumb34"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>                
+            </div><!-- End Carousel --> 
+        </div><!-- End Well -->
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ full-feature.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Fullsize Header - Bootstrap Carousel</title>
+<meta name="description" content="Fullsize Header - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body {
+	padding-top:50px;
+}
+/*#####################
+Additional Styles (required)
+#####################*/
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-inner .item img {
+	width:100%;
+	height:100%;
+}
+.carousel-indicators {
+	bottom:5px;
+	left:0;
+	width:auto;
+	padding:5px 25px 5px 25px;
+	margin-left:0;
+	background:rgba(0,0,0,0.7);
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:8px;
+	height:8px;
+	background:#fff;
+}
+.carousel-indicators .active {
+	width:10px;
+	height:10px;
+	background:#39b3d7;
+	border-color:#39b3d7;
+}
+
+.carousel-control {
+	background:	#39b3d7;
+	color:#fff;
+	padding: 4px 0;
+	width:26px;
+	top:auto;	
+	left:auto;
+	bottom:12px;
+	opacity:0.85;
+}
+.carousel-control.right {
+	right:10px;
+}
+
+.carousel-control.left {
+	right: 46px;
+}
+.carousel-caption {
+	top:auto;
+	width:auto;
+	right:auto;
+	bottom:60px;
+	left:0;
+	padding:20px;
+	background:rgba(0,0,0,0.70);
+	text-align:left;
+  	height:auto;
+	max-width:50%;
+
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+    <div id="myCarousel" class="carousel slide">
+    
+      <div class="carousel-inner">
+        <article class="item active">
+          <img src="http://placehold.it/1200x440/cccccc/ffffff">
+          <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p><a class="btn btn-info btn-sm">Read More</a></p>
+          </div>
+        </article>
+         <article class="item">
+          <img src="http://placehold.it/1200x440/999999/cccccc">
+          <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p><a class="btn btn-info btn-sm">Read More</a></p>
+          </div>
+        </article> 
+        <article class="item">
+          <img src="http://placehold.it/1200x440/dddddd/333333">
+          <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+            <p><a class="btn btn-info btn-sm">Read More</a></p>
+          </div>
+        </article>                      
+      </div>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>        
+      <!-- Controls -->
+      <div class="carousel-controls">
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="fa fa-angle-double-left"></span>
+          </a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="fa fa-angle-double-right"></span>
+          </a>
+      </div>
+    </div>    
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ fullsize-header.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Fullsize Header - Bootstrap Carousel</title>
+<meta name="description" content="Fullsize Header - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+<!--#####################
+CUSTOM CSS
+######################-->
+<style>
+body {
+	padding-top:50px;
+}
+.item img {
+	width:100%;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+	opacity:1;
+}
+
+.carousel-control.left {
+	top:40%
+}
+.carousel-control.right {
+	top:40%
+}
+.carousel-caption {
+	top:15%;
+	text-align:left;
+  	height:auto;
+
+}
+.carousel-caption h2 { 
+	line-height:160%
+}
+.carousel-caption h2 span {
+	background:#428BCA;
+	padding:10px 20px;
+	color:#fff;
+	border-left:3px solid #fff;
+}
+p.caption {
+	background:#fff;
+	padding:6px;
+	text-shadow:none;
+	color:#428BCA;
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+ 
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">  
+      <div class="carousel-inner">
+        <div class="item active">
+          <!--<img src="img/slider/Fotolia_30977559_XS.jpg" alt="slide 1">-->
+          <img src="http://placehold.it/1500x400/cccccc/ffffff" alt="Slide1">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2><span>Carousel Headline 1</span></h2>
+              <p class="caption"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span></p>
+              <p><a class="btn btn-danger" href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+            </p></div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1500x400/999999/cccccc" alt="Slide2">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2><span>Carousel Headline 2</span></h2>
+              <p class="caption"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span></p>
+              <p><a class="btn btn-danger" href="#">Read More <i class="fa fa-angle-double-right"></i></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1500x400/dddddd/333333" alt="Slide3">
+          <div class="container">
+            <div class="carousel-caption">
+              <h2><span>Carousel Headline 3</span></h2>
+              <p class="caption"><span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</span></p>
+              <p><a class="btn btn-danger" href="#">Read More <i class="fa fa-angle-double-right"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="fa fa-chevron-left fa-2x"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="fa fa-chevron-right fa-2x"></span></a>  
+    </div>
+    <!-- /.carousel -->
+ 
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ header-controls.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Header Controls - Bootstrap Carousel</title>
+<meta name="description" content="Header Controls - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+h3 {
+	color:#3276b1;
+	border-bottom:1px solid #3276b1;
+	margin-bottom:0;
+}
+.carousel-control {
+	color:#428BCA;
+	top:-25px;
+	left:auto;
+	bottom:auto;
+	opacity:1;
+	text-shadow:none;
+}
+.carousel-control:hover { color:#d9534f; }
+
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control.right { right:-10px; }
+.carousel-control.left { right:15px; }
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-3">
+        	<h3>Headline</h3>
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">           
+                    <figure class="item active">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide1">
+                    </figure>
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide2">                                   
+                     </figure>  
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="slide3">
+                    </figure>                                                                                   
+                </div>              
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-double-left"></i></a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="fa fa-angle-double-right"></i></a>                                   
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+ news-box.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Simple Indicators - Bootstrap Carousel</title>
+<meta name="description" content="Simple Indicators - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+.carousel-indicators {
+	bottom:-40px;
+	left:0;
+	width:100%;
+	background:#ccc;
+	padding: 6px 0px;
+	margin-left:0;
+	border-top:2px solid #fff;
+}
+.carousel-indicators li {
+	width:12px;
+	height:12px;	
+	background:#fff;
+	border-color:#fff;
+
+}
+.carousel-indicators .active {
+	width:14px;
+	height:14px;
+	background:#428bca;
+	border-color:#428bca;
+}
+.carousel-inner .thumbnail {
+	margin-bottom:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+.carousel-inner .caption {
+	background:#ddd;
+	padding: 10px;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-4">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">        
+                <div class="carousel-inner">           
+                    <div class="item active"> 
+                    	<a href="#"><img class="thumbnail" src="http://placehold.it/600x400/" alt="Slide1"></a>
+                        <div class="caption">
+                       	  <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                        </div>
+                    </div>
+                    <div class="item"> 
+                    	<a href="#"><img class="thumbnail" src="http://placehold.it/600x400/" alt="Slide2"></a>
+                        <div class="caption">
+                       	  <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                        </div>                                                           
+                     </div>  
+                    <div class="item"> 
+                    	<a href="#"><img class="thumbnail" src="http://placehold.it/600x400/" alt="Slide3"></a>
+                        <div class="caption">
+                       	  <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                        </div>                        
+                    </div>                                                                                   
+                </div>
+                 <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>                                                                 
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ news-carousel.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Bootstrap Basic Carousel - Bootstrap Carousel</title>
+<meta name="description" content="Bootstrap Basic Carousel - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+/*#####################
+Additional Styles (required)
+#####################*/
+#myCarousel .carousel-caption {
+	left:0;
+	right:0;
+	bottom:0;
+	text-align:left;
+	padding:10px;
+	background:rgba(0,0,0,0.6);
+	text-shadow:none;
+}
+
+#myCarousel .list-group {
+	position:absolute;
+	top:0;
+	right:0;
+}
+#myCarousel .list-group-item {
+	border-radius:0px;
+	cursor:pointer;
+}
+#myCarousel .list-group .active {
+	background-color:#eee;	
+}
+
+@media (min-width: 992px) { 
+	#myCarousel {padding-right:33.3333%;}
+	#myCarousel .carousel-controls {display:none;} 	
+}
+@media (max-width: 991px) { 
+	.carousel-caption p,
+	#myCarousel .list-group {display:none;} 
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      
+        <div class="item active">
+          <img src="http://placehold.it/760x400/cccccc/ffffff">
+           <div class="carousel-caption">
+            <h4><a href="#">Lorem ipsum dolor sit amet consetetur sadipscing</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div><!-- End Item -->
+ 
+         <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">consetetur sadipscing elitr, sed diam nonumy eirmod</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">tempor invidunt ut labore et dolore</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="http://placehold.it/760x400/999999/cccccc">
+           <div class="carousel-caption">
+            <h4><a href="#">magna aliquyam erat, sed diam voluptua</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div><!-- End Item -->
+ 
+        <div class="item">
+          <img src="http://placehold.it/760x400/dddddd/333333">
+           <div class="carousel-caption">
+            <h4><a href="#">tempor invidunt ut labore et dolore magna aliquyam erat</a></h4>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. <a class="label label-primary" href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank">Free Bootstrap Carousel Collection</a></p>
+          </div>
+        </div><!-- End Item -->
+                
+      </div><!-- End Carousel Inner -->
+ 
+ 
+    <ul class="list-group col-sm-4">
+      <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Lorem ipsum dolor sit amet consetetur sadipscing</h4></li>
+      <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>consetetur sadipscing elitr, sed diam nonumy eirmod</h4></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>tempor invidunt ut labore et dolore</h4></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>magna aliquyam erat, sed diam voluptua</h4></li>
+      <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>tempor invidunt ut labore et dolore magna aliquyam erat</h4></li>
+    </ul>
+ 
+      <!-- Controls -->
+      <div class="carousel-controls">
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+      </div>
+ 
+    </div><!-- End Carousel -->
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>	
+/*#####################
+Additional jQuery (required)
+#####################*/
+$(document).ready(function(){
+    
+	var clickEvent = false;
+	$('#myCarousel').carousel({
+		interval:   4000	
+	}).on('click', '.list-group li', function() {
+			clickEvent = true;
+			$('.list-group li').removeClass('active');
+			$(this).addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.list-group').children().length -1;
+			var current = $('.list-group li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.list-group li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+})
+
+$(window).load(function() {
+    var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+    var itemlength = $('#myCarousel .item').length;
+    var triggerheight = Math.round(boxheight/itemlength+1);
+	$('#myCarousel .list-group-item').outerHeight(triggerheight);
+});
+</script>
+</body>
+</html>
+ numbered-indicators.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Numbered Indicators - Bootstrap Carousel</title>
+<meta name="description" content="Numbered Indicators - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+.carousel-inner .item {
+	border: 2px solid #3276b1;
+}
+.carousel-indicators {
+	bottom:-30px;
+	left:0;
+	width:auto;
+	margin-left:0;
+	color:#fff;
+	font-weight:bold;
+}
+.carousel-indicators li {
+	border-radius:0;
+	padding:0 8px;
+	width:auto;
+	height:auto;
+	line-height:20px;
+	background:#ddd;
+	color:#999;
+	border:none;
+	text-indent:0;
+	margin:0;
+}
+.carousel-indicators li.active {
+	width:auto;
+	height:auto;
+	color:#fff;	
+	background:#3276b1;
+	border-color:none;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-3">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">           
+                    <figure class="item active">
+                        <img src="http://placehold.it/300x200/" alt="Slide1">
+                    </figure>
+                    <figure class="item">
+                        <img src="http://placehold.it/300x200/" alt="Slide2">                                   
+                     </figure>  
+                    <figure class="item">
+                        <img src="http://placehold.it/300x200/" alt="Slide3">
+                    </figure>                                                                                   
+                </div>
+                 <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active">1</li>
+                    <li data-target="#myCarousel" data-slide-to="1">2</li>
+                    <li data-target="#myCarousel" data-slide-to="2">3</li>
+                  </ol>               
+                                
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+ product-carousel.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Product Thumbnail - Bootstrap Carousel</title>
+<meta name="description" content="Produkt Thumbnail - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+#myCarousel .thumbnail {
+	margin-bottom:0;
+}
+.carousel-control {
+	color:#428BCA;
+	top:44%;
+	bottom:auto;
+	opacity:1;
+}
+.carousel-control:hover {
+	color:#d9534f;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control.right {
+	left:auto;
+	right:-25px;
+}
+.carousel-control.left {
+	right:auto;
+	left:-25px;
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-3">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide1">
+                      <div class="caption">
+                        <h3>Product label</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                        <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                      </div>
+                    </div>        
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide2">
+                      <div class="caption">
+                        <h3>Product label</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                        <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                      </div>
+                    </div>        
+                </div><!-- End Item -->
+                <div class="item">
+                    <div class="thumbnail">
+                      <img src="http://placehold.it/300x200/" alt="Slide1">
+                      <div class="caption">
+                        <h3>Product label</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                        <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                      </div>
+                    </div>        
+                </div><!-- End Item -->                                
+              </div><!-- End Carousel Inner -->
+              <div class="carousel-controls">
+              	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+              	<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+              </div>
+            </div><!-- /.carousel -->
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+ product-slider.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Boxed Thumbnails - Bootstrap Carousel</title>
+<meta name="description" content="Boxed Thumbnails - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+
+#myCarousel .thumbnail {
+	margin-bottom: 0;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control {
+	color:#fff;
+	top:40%;
+	color:#428BCA;
+	bottom:auto;
+	padding-top:4px;
+	width:30px;
+	height:30px;
+	text-shadow:none;
+	opacity:1;
+}
+.carousel-control:hover {
+	color: #d9534f;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control.right {
+	left:auto;
+	right:-32px;
+}
+.carousel-control.left {
+	right:auto;
+	left:-32px;
+}
+
+.carousel-indicators {
+	bottom:-30px;
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:10px;
+	height:10px;
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.carousel-indicators .active {
+	width:12px;
+	height:12px;
+	background:#3276b1;
+	border-color:#3276b1;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+			<div class="well">
+            <!-- Carousel
+            ================================================== -->            
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide11">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div>        
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide12">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide13">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide14">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide21">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div>        
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide22">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide23">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide24">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide31">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div>        
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide32">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide33">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                            <div class="col-md-3">
+                                <div class="thumbnail">
+                                  <img src="http://placehold.it/300x200/" alt="Slide34">
+                                  <div class="caption">
+                                    <h3>Product label</h3>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">12,99 €</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>
+                                  </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-chevron-left fa-2x"></i></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-chevron-right fa-2x"></i></a>
+                
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>                
+            </div><!-- End Carousel --> 
+        </div><!-- End Well -->
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ simple-caption.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Simple Caption - Bootstrap Carousel</title>
+<meta name="description" content="Simple Caption - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body {
+	padding-top:50px;
+}
+/*#####################
+Additional Styles (required)
+#####################*/
+#myCarousel {
+	padding:5px;
+	background: #428BCA;
+}
+#myCarousel  .carousel-caption {
+	top:auto;
+	width:auto;
+	right:auto;
+	bottom:0px;
+	left:0;
+	padding:20px;
+	background:rgba(255,255,255,0.65);
+	text-align:center;
+  	height:auto;
+	width:100%;
+	color:#432A18;/*#FFF*/
+	text-shadow:none;
+}
+#myCarousel  .carousel-caption h2 {
+	color:#428BCA;
+	margin-top:0;
+}
+.carousel-control {
+	color:#fff;
+	top:44%;
+	background:#428BCA;
+	bottom:auto;
+	padding-top:8px;
+	width:36px;
+	border-radius:50%;
+	height:36px;
+	opacity:1;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control.right,
+.carousel-control .glyphicon-chevron-right {
+	left:auto;
+	right:-16px;
+}
+.carousel-control.left {
+	right:auto;
+	left:-16px;
+}
+
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+        <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">           
+            <div class="item active">
+              <img src="http://placehold.it/1200x440/cccccc/ffffff" alt="Slide1">
+              <div class="carousel-caption">
+                <h2>Headline</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <img src="http://placehold.it/1200x440/999999/cccccc" alt="Slide2">
+              <div class="carousel-caption">
+                <h2>Headline</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+            </div>
+             
+             <div class="item">
+              <img src="http://placehold.it/1200x440/dddddd/333333" alt="Slide3">
+              <div class="carousel-caption">
+                <h2>Headline</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              </div>
+            </div>                                 
+          </div>          
+              <div class="carousel-controls">
+              	<a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-double-left fa-lg"></i></a>
+              	<a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-angle-double-right fa-lg"></i></a>
+              </div>
+          
+        </div>   
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ simple-controls.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Simple Indicators - Bootstrap Carousel</title>
+<meta name="description" content="Simple Indicators - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+.carousel-indicators {
+	bottom:15px;
+	left:10px;
+	width:auto;
+	margin-left:0;
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:8px;
+	height:8px;
+	background:#fff;
+}
+.carousel-indicators .active {
+	width:10px;
+	height:10px;
+	background:#3276b1;
+	border-color:#3276b1;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-3">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                 <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>            
+                <div class="carousel-inner">           
+                    <figure class="item active">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide1">
+                    </figure>
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide2">                                   
+                     </figure>  
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide3">
+                    </figure>                                                                                   
+                </div>                                             
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ simple-indicators.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Simple Indicators - Bootstrap Carousel</title>
+<meta name="description" content="Simple Indicators - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+.carousel-indicators {
+	bottom:15px;
+	left:10px;
+	width:auto;
+	margin-left:0;
+}
+.carousel-indicators li {
+	border-radius:0;
+	width:8px;
+	height:8px;
+	background:#fff;
+}
+.carousel-indicators .active {
+	width:10px;
+	height:10px;
+	background:#3276b1;
+	border-color:#3276b1;
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-3">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                 <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>            
+                <div class="carousel-inner">           
+                    <figure class="item active">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide1">
+                    </figure>
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide2">                                   
+                     </figure>  
+                    <figure class="item">
+                        <img class="thumbnail" src="http://placehold.it/300x200/" alt="Slide3">
+                    </figure>                                                                                   
+                </div>                                             
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+ tabbed-slider.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Bootstrap Basic Carousel - Bootstrap Carousel</title>
+<meta name="description" content="Bootstrap Basic Carousel - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+#myCarousel .nav a small {
+	display:block;
+}
+#myCarousel .nav {
+	background:#eee;
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+      
+        <div class="item active">
+          <img src="http://placehold.it/1200x440/cccccc/ffffff">
+           <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </div>
+        </div><!-- End Item -->
+ 
+         <div class="item">
+          <img src="http://placehold.it/1200x440/999999/cccccc">
+           <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="http://placehold.it/1200x440/dddddd/333333">
+           <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </div>
+        </div><!-- End Item -->
+        
+        <div class="item">
+          <img src="http://placehold.it/1200x440/999999/cccccc">
+           <div class="carousel-caption">
+            <h3>Headline</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </div>
+        </div><!-- End Item -->
+                
+      </div><!-- End Carousel Inner -->
+ 
+ 
+		<ul class="nav nav-pills nav-justified">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem ipsum dolor sit</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum dolor sit</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum dolor sit</small></a></li>
+          <li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum dolor sit</small></a></li>
+        </ul>
+ 
+ 
+    </div><!-- End Carousel -->
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+	
+	var clickEvent = false;
+	$('#myCarousel').on('click', '.nav a', function() {
+			clickEvent = true;
+			$('.nav li').removeClass('active');
+			$(this).parent().addClass('active');		
+	}).on('slid.bs.carousel', function(e) {
+		if(!clickEvent) {
+			var count = $('.nav').children().length -1;
+			var current = $('.nav li.active');
+			current.removeClass('active').next().addClass('active');
+			var id = parseInt(current.data('slide-to'));
+			if(count == id) {
+				$('.nav li').first().addClass('active');	
+			}
+		}
+		clickEvent = false;
+	});
+</script>
+</body>
+</html>
+ testimonial-carousel.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Simple Controls - Bootstrap Carousel</title>
+<meta name="description" content="Simple Controls - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body { padding-top: 50px; }
+
+/*#####################
+Additional Styles (required)
+######################*/
+
+.carousel-inner .item img {
+	width:100%;
+	height:100%;
+}
+.item .thumbnail {
+	margin-bottom:0;
+}
+.carousel-control.left, .carousel-control.right {
+	background-image:none !important;
+}
+.carousel-control {
+	background:	#ddd;
+	color:#999;
+	padding: 4px 0;
+	width:26px;
+	top:auto;	
+	left:auto;
+	bottom:0;
+	opacity:1;
+	text-shadow:none;
+}
+.carousel-control.right {
+	right:10px;
+}
+
+.carousel-control.left {
+	right: 40px;
+}
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="row">
+    	<div class="col-md-6">
+            <!-- Carousel
+            ================================================== -->
+            <div id="myCarousel" class="carousel slide">
+                 <!-- Indicators -->         
+                <div class="carousel-inner">           
+                    <div class="item active">
+                        <blockquote>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        </blockquote>
+                     </div>  
+                    <div class="item">
+                        <blockquote>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                        </blockquote>
+                    </div>                                                                                   
+                </div> 
+               <div class="carousel-controls">
+                  <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="fa fa-angle-double-left"></span></a>
+                  <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="fa fa-angle-double-right"></span></a>
+              </div>               
+                                                            
+            </div><!-- End Carousel -->  
+    	</div>
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
+ thumbnail-navigation.html Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo: Fullsize Header - Bootstrap Carousel</title>
+<meta name="description" content="Fullsize Header - Bootstrap Carousel - Collection by sevenXdemo - More Information: www.sevenX.de/blog" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+ 
+ 
+<style>
+body {
+	padding-top:50px;
+}
+/*#####################
+Additional Styles (required)
+#####################*/
+
+
+#myCarousel .carousel-indicators {
+    bottom: 0;
+    left: 10px;
+    margin-left: 5px;
+    width: 100%;
+}
+
+#myCarousel .carousel-indicators li {
+    border: medium none;
+    border-radius: 0;
+    float: left;
+    height: 44px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 5px !important;
+    margin-top: 0;
+    width: 120px;
+}
+
+#myCarousel .carousel-indicators img {
+    border: 2px solid #FFFFFF;
+    float: left;
+    height: 44px;
+    left: 0;
+    width: 120px;
+}
+
+#myCarousel .carousel-indicators .active img {
+    border: 2px solid #39b3d7;
+
+}
+
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div class="container">
+	<div class="carousel slide article-slide" id="myCarousel">
+      <div class="carousel-inner cont-slider">
+    
+        <div class="item active">
+          <img src="http://placehold.it/1200x440/cccccc/ffffff">
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1200x440/999999/cccccc">
+        </div>
+        <div class="item">
+          <img src="http://placehold.it/1200x440/dddddd/333333">
+        </div>               
+      </div>
+      
+      <!-- Indicators -->
+      <ol class="carousel-indicators visible-lg visible-md">
+        <li class="active" data-slide-to="0" data-target="#myCarousel">
+          <img alt="" title="" src="http://placehold.it/120x44/cccccc/ffffff">
+        </li>
+        <li class="" data-slide-to="1" data-target="#myCarousel">
+          <img alt="" title="" src="http://placehold.it/120x44/999999/cccccc">
+        </li>
+        <li class="" data-slide-to="2" data-target="#myCarousel">
+          <img alt="" title="" src="http://placehold.it/120x44/dddddd/333333">
+        </li>               
+      </ol>                 
+    </div>
+</div>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+	$('#myCarousel').carousel({
+		interval:   4000
+	});
+</script>
+</body>
+</html>
